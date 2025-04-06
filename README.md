@@ -42,7 +42,7 @@ Um sistema web completo para gerenciamento de alunos de faculdade, com cadastro,
    http://localhost:5000
 
 📦 Estrutura do Projeto
-
+ ```bash
 cadastro-alunos/
 ├── app.py                # Aplicação principal
 ├── models.py             # Modelos do banco de dados
