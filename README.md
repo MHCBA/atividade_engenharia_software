@@ -1,4 +1,4 @@
-# atividade_engenharia_software
+# Atividade Engenharia de Software
 # 🎓 Sistema de Cadastro de Alunos (Python/Flask)
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
