@@ -30,12 +30,15 @@ Um sistema web completo para gerenciamento de alunos de faculdade, com cadastro,
    cd cadastro-alunos
    
 2. Instale as dependências:
+    ```bash
    pip install -r requirements.txt
    
-3. Execute a aplicação:
+4. Execute a aplicação:
+    ```bash
    python app.py
 
-4. Acesse no navegador:
+6. Acesse no navegador:
+    ```bash
    http://localhost:5000
 
 📦 Estrutura do Projeto
