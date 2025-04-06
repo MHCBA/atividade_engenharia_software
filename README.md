@@ -26,7 +26,7 @@ Um sistema web completo para gerenciamento de alunos de faculdade, com cadastro,
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/seu-usuario/cadastro-alunos.git](https://github.com/MHCBA/atividade_engenharia_software.git)
+   git clone https://github.com/MHCBA/atividade_engenharia_software.git
    cd cadastro-alunos
    
 2. Instale as dependências:
