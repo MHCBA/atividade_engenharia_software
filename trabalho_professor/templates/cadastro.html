@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="mb-4">Cadastrar Novo Aluno</h2>
+    
+    <form method="POST" action="{{ url_for('cadastrar') }}">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome Completo:</label>
+            <input type="text" class="form-control" id="nome" name="nome" required 
+                   placeholder="Ex: João da Silva">
+        </div>
+        
+        <div class="mb-3">
+            <label for="cpf" class="form-label">CPF:</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" required
+                   placeholder="Ex: 123.456.789-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+            <div class="form-text">Formato: 000.000.000-00</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="matricula" class="form-label">Matrícula:</label>
+            <input type="text" class="form-control" id="matricula" name="matricula" required
+                   placeholder="Ex: 20230001">
+        </div>
+        
+        <div class="mb-3">
+            <label for="endereco" class="form-label">Endereço:</label>
+            <input type="text" class="form-control" id="endereco" name="endereco" required
+                   placeholder="Ex: Rua das Flores, 123 - Centro">
+        </div>
+        
+        <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone:</label>
+            <input type="tel" class="form-control" id="telefone" name="telefone" required
+                   placeholder="Ex: (11) 99999-8888" pattern="\(\d{2}\) \d{4,5}-\d{4}">
+            <div class="form-text">Formato: (00) 00000-0000</div>
+        </div>
+        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary me-md-2">Cancelar</a>
+            <button type="submit" class="btn btn-primary">Cadastrar Aluno</button>
+        </div>
+    </form>
+{% endblock %}

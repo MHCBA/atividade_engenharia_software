@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="d-flex justify-content-between mb-3">
+        <a href="{{ url_for('cadastrar') }}" class="btn btn-primary">Cadastrar Novo Aluno</a>
+        <a href="{{ url_for('exportar_json') }}" class="btn btn-secondary">Exportar como JSON</a>
+    </div>
+
+    <form action="{{ url_for('buscar') }}" method="get" class="mb-4">
+        <div class="input-group">
+            <input type="text" name="termo" class="form-control" placeholder="Pesquisar por nome, CPF ou matrícula">
+            <button type="submit" class="btn btn-outline-secondary">Buscar</button>
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Matrícula</th>
+                <th>Endereço</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.id }}</td>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.cpf }}</td>
+                <td>{{ aluno.matricula }}</td>
+                <td>{{ aluno.endereco }}</td>
+                <td>{{ aluno.telefone }}</td>
+                <td>
+                    <a href="{{ url_for('editar', id=aluno.id) }}" class="btn btn-sm btn-warning">Editar</a>
+                    <a href="{{ url_for('excluir', id=aluno.id) }}" class="btn btn-sm btn-danger" 
+                       onclick="return confirm('Tem certeza que deseja excluir este aluno?')">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
