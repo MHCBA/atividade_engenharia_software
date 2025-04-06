@@ -56,7 +56,7 @@ cadastro-alunos/
     ├── editar.html       # Edição de registros
     └── buscar.html       # Resultados de busca
 
-
+```
 📌 Exemplo de Uso
 Cadastrar novo aluno:
 
